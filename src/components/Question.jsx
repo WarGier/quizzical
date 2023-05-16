@@ -7,7 +7,9 @@ function Question({ question, questionId, correctAnswer, incorrectAnswers, setUs
     const allChoices = [...incorrectAnswers];
     allChoices.splice(Math.floor(Math.random() * 4), 0, correctAnswer);
 
-    function handleSelect(answer) {}
+    function handleSelect(answer) {
+        console.log(answer);
+    }
 
     const choiceElements = allChoices.map((answer) => (
         <Choice answer={answer} handleSelect={() => handleSelect(answer)} />
